@@ -117,6 +117,8 @@ To create, configure, and deploy the function app:
   
 7.  Click [Configuration](https://learn.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal) and under the **Application Settings** tab add/modify the following variables and values:
 
+**NOTE** These parameters will need to be manually added, as they are not pulled down from Github. The Function will not work unless ALL Parameters are present and have correct values.
+
 | Variable                    | Value                                                                                   |
 |-----------------------------|-----------------------------------------------------------------------------------------|
 | FUNCTIONS_EXTENSION_VERSION | ~1 (Deals with identified [issue](https://github.com/Azure/ha-nva-fo/issues/7))         |
