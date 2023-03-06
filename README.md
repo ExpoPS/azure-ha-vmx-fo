@@ -1,5 +1,5 @@
 # Automated failover for network virtual appliances: 
-## Supporting high availability with user-defined route tables on Microsoft Azure (Apply patch for Meraki vMX)
+## Supporting high availability with user-defined route tables on Microsoft Azure (Customised for Meraki vMX)
 
 This guide shows you how to implement high availability for network virtual appliance (NVA) firewalls using custom route tables that direct traffic through
 an active-passive NVA configuration. These user-defined routes (UDRs) override the Azure default system routes by directing traffic to the active NVA firewall in an active-passive pair. If the active NVA firewall fails for some reason, whether through a planned or unplanned outage, the route can failover to the secondary NVA firewall.
@@ -103,7 +103,7 @@ To create, configure, and deploy the function app:
 
     1.  **Choose Source**: External Git
 
-    2.  **Repository URL**: <https://github.com/expoearchie/azurefunction-nva-udr-failover/>  
+    2.  **Repository URL**: <https://github.com/ExpoPS/azure-ha-vmx-fo/>  
         Please change it in the appropriate Repository URL.
 
     3.  **Branch**: *main*  
@@ -119,7 +119,7 @@ To create, configure, and deploy the function app:
 
 | Variable                    | Value                                                                                   |
 |-----------------------------|-----------------------------------------------------------------------------------------|
-| FUNCTIONS_EXTENSION_VERSION | ~1 (Deal with [issue](https://github.com/Azure/ha-nva-fo/issues/7))                     |
+| FUNCTIONS_EXTENSION_VERSION | ~1 (Deals with identified [issue](https://github.com/Azure/ha-nva-fo/issues/7))         |
 | SP\_USERNAME                | Application ID of the service principal                                                 |
 | SP\_PASSWORD                | Key value of the service principal                                                      |
 | TENANTID                    | Azure Active Directory tenant ID                                                        |
